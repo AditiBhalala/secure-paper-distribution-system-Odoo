@@ -18,7 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await response.json();
       
-      
+      if (response.ok) {
+        localStorage.setItem('token', data.token);
+        alert('Login successful');
+        window.location.href = 'upload.html';
+      } else {
+        alert('Login failed');
+      }
     });
   }
 
