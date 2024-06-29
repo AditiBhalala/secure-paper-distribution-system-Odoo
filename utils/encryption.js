@@ -3,6 +3,7 @@ const algorithm = 'aes-256-cbc';
 const key = Buffer.from(process.env.ENCRYPTION_KEY, 'hex');
 const iv = crypto.randomBytes(16);
 
+
 const encrypt = (buffer) => {
   const cipher = crypto.createCipheriv(algorithm, key, iv);
   const encrypted = Buffer.concat([cipher.update(buffer), cipher.final()]);
