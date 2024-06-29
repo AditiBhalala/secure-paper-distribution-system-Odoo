@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-
 dotenv.config();
 
 const connectDB = async () => {
@@ -15,5 +14,4 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
 module.exports = connectDB;
